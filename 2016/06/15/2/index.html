@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>githug 通关笔记(一) | Yang&#39;s Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git 安装git官网去官网下载最新的git安装包，按照步骤安装即可。
+
+windows下方便使用的话，可以将 git bash here  和  git GUI here 打勾这样鼠标右键菜单栏会自动将这两个工具集成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="githug 通关笔记(一)">
+<meta property="og:url" content="http://yoursite.com/2016/06/15/2/index.html">
+<meta property="og:site_name" content="Yang's Garden">
+<meta property="og:description" content="git 安装git官网去官网下载最新的git安装包，按照步骤安装即可。
+
+windows下方便使用的话，可以将 git bash here  和  git GUI here 打勾这样鼠标右键菜单栏会自动将这两个工具集成">
+<meta property="og:updated_time" content="2016-12-06T06:31:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="githug 通关笔记(一)">
+<meta name="twitter:description" content="git 安装git官网去官网下载最新的git安装包，按照步骤安装即可。
+
+windows下方便使用的话，可以将 git bash here  和  git GUI here 打勾这样鼠标右键菜单栏会自动将这两个工具集成">
+  
+    <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="http://7xsodh.com1.z0.glb.clouddn.com/YangHeader.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Guoquan.Yang</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">凡是让你痛苦的，都是让你成长的</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">全部文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yangguoquan" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:15258850989@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Guoquan.Yang</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://7xsodh.com1.z0.glb.clouddn.com/YangHeader.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Guoquan.Yang</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">凡是让你痛苦的，都是让你成长的</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+		        
+		        	<li><a href="/archives">全部文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yangguoquan" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:15258850989@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      githug 通关笔记(一)
+    </h1>
+  
+
+        <a href="/2016/06/15/2/" class="archive-article-date">
+  	<time datetime="2016-06-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-安装"><a href="#git-安装" class="headerlink" title="git 安装"></a>git 安装</h2><p><a href="https://git-scm.com/" target="_blank" rel="external">git官网</a>去官网下载最新的git安装包，按照步骤安装即可。</p>
+<blockquote>
+<p>windows下方便使用的话，可以将 <strong>git bash here</strong>  和  <strong>git GUI here</strong> 打勾<br>这样鼠标右键菜单栏会自动将这两个工具集成<br><a id="more"></a></p>
+</blockquote>
+<h2 id="git-工具-—-SourceTree"><a href="#git-工具-—-SourceTree" class="headerlink" title="git 工具 — [SourceTree]"></a>git 工具 — <a href="https://www.sourcetreeapp.com" target="_blank" rel="external">[SourceTree]</a></h2><p>很方便的一个git可视化版本管理工具。界面很清爽直观。对于不擅长git指令的小白还是很容易上手的。<br>windows和mac平台都支持。<br><a href="https://github.com/" target="_blank" rel="external">github</a>仓库。没有一个程序猿不知道它把。</p>
+<h2 id="githug-https-github-com-Gazler-githug-安装"><a href="#githug-https-github-com-Gazler-githug-安装" class="headerlink" title="githug(https://github.com/Gazler/githug) 安装"></a>githug(<a href="https://github.com/Gazler/githug" target="_blank" rel="external">https://github.com/Gazler/githug</a>) 安装</h2><blockquote>
+<p>Githug 提供一个实用，轻松的方式来学习 Git，它包括一系列级别的划分，适合各种程度的用户。用户需要用 Git 命令来保证答案的正确。</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install githug  <span class="comment">//安装githug</span></div></pre></td></tr></table></figure>
+<h3 id="开始游戏"><a href="#开始游戏" class="headerlink" title="开始游戏"></a>开始游戏</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">githug   <span class="comment">//启动</span></div></pre></td></tr></table></figure>
+<h3 id="游戏指令"><a href="#游戏指令" class="headerlink" title="游戏指令"></a>游戏指令</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">githug <span class="keyword">help</span> [TASK]  # <span class="keyword">Describe</span> available tasks <span class="keyword">or</span> one specific task</div><div class="line">githug hint         # <span class="keyword">Get</span> a hint <span class="keyword">for</span> the <span class="keyword">current</span> <span class="keyword">level</span>（当前关卡获得提示）</div><div class="line">githug <span class="keyword">levels</span>       # <span class="keyword">List</span> all <span class="keyword">of</span> the <span class="keyword">levels</span>（查看所有关卡）</div><div class="line">githug play         # Initialize the game（验证游戏）</div><div class="line">githug <span class="keyword">reset</span>        # <span class="keyword">Reset</span> the <span class="keyword">current</span> <span class="keyword">level</span>（初始化当前关卡）</div><div class="line">githug <span class="keyword">test</span>         # <span class="keyword">Test</span> a <span class="keyword">level</span> <span class="keyword">from</span> a <span class="keyword">file</span> <span class="keyword">path</span>（）</div></pre></td></tr></table></figure>
+<h2 id="githug-通关指南"><a href="#githug-通关指南" class="headerlink" title="githug 通关指南"></a>githug 通关指南</h2><h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ githug</div></pre></td></tr></table></figure>
+<h3 id="LEVEL-1-init"><a href="#LEVEL-1-init" class="headerlink" title="LEVEL 1  init"></a>LEVEL 1  init</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git init</div><div class="line">Initialized empty Git repository <span class="keyword">in</span> <span class="regexp">/Users/</span>FDT<span class="regexp">/YgqSpace/gi</span>thug<span class="regexp">/git_hug/</span>.git<span class="regexp">/</span></div></pre></td></tr></table></figure>
+<h3 id="LEVEL-2-config"><a href="#LEVEL-2-config" class="headerlink" title="LEVEL 2 config"></a>LEVEL 2 config</h3><p>Set up your git name and email, this is important so that your commits can be identified.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">git</span> <span class="selector-tag">config</span> <span class="selector-tag">--local</span> <span class="selector-tag">user</span><span class="selector-class">.name</span> <span class="selector-tag">yxx</span></div><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">git</span> <span class="selector-tag">config</span> <span class="selector-tag">--local</span> <span class="selector-tag">user</span><span class="selector-class">.email</span> <span class="selector-tag">yxx</span>@<span class="keyword">gmail</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-3-add"><a href="#LEVEL-3-add" class="headerlink" title="LEVEL 3 add"></a>LEVEL 3 add</h3><p>Note: You start each level with a new repo. Don’t look for files from the previous one.<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git <span class="keyword">add</span><span class="bash"> README</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-4-commit"><a href="#LEVEL-4-commit" class="headerlink" title="LEVEL 4 commit"></a>LEVEL 4 commit</h3><p>The <code>README</code> file has been added to your staging area, now commit it.<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(<span class="literal">master</span>) ✗ git commit -m <span class="string">"your commit note"</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-5-clone"><a href="#LEVEL-5-clone" class="headerlink" title="LEVEL 5 clone"></a>LEVEL 5 clone</h3><p>Clone the repository at <a href="https://github.com/Gazler/cloneme" target="_blank" rel="external">https://github.com/Gazler/cloneme</a>.<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git <span class="keyword">clone</span> <span class="title">https</span>://github.com/Gazler/cloneme</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-6-clone-to-folder"><a href="#LEVEL-6-clone-to-folder" class="headerlink" title="LEVEL 6 clone_to_folder"></a>LEVEL 6 clone_to_folder</h3><p>Clone the repository at <a href="https://github.com/Gazler/cloneme" target="_blank" rel="external">https://github.com/Gazler/cloneme</a> to <code>my_cloned_repo</code>.<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git <span class="keyword">clone</span> <span class="title">https</span>://github.com/Gazler/cloneme my_cloned_repo</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-7-ignore"><a href="#LEVEL-7-ignore" class="headerlink" title="LEVEL 7 ignore"></a>LEVEL 7 ignore</h3><p>The text editor ‘vim’ creates files ending in <code>.swp</code> (swap files) for all files that are currently open.  We don’t want them creeping into the repository.  Make this repository ignore <code>.swp</code> files.<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ vim .gitignore</div><div class="line">//进入vim编辑器</div><div class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></div><div class="line">.profile.yml</div><div class="line">.gitignore</div><div class="line">*.swp  //新增忽略规则</div><div class="line"></div><div class="line"></div><div class="line">//保存并退出</div><div class="line">:wq</div><div class="line"></div><div class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-8-include"><a href="#LEVEL-8-include" class="headerlink" title="LEVEL 8 include"></a>LEVEL 8 include</h3><p>Notice a few files with the ‘.a’ extension.  We want git to ignore all but the ‘lib.a’ file.<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) vim .gitignore</div><div class="line">//进入vim编辑器</div><div class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></div><div class="line">.profile.yml</div><div class="line">.gitignore</div><div class="line">*.a  //忽略所有的.a 文件</div><div class="line">!lib.a //出去lib.a 文件</div><div class="line"></div><div class="line">//保存并退出</div><div class="line">:wq</div><div class="line"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-9-status"><a href="#LEVEL-9-status" class="headerlink" title="LEVEL 9 status"></a>LEVEL 9 status</h3><p>There are some files in this repository, one of the files is untracked, which file is it?<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git status</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial <span class="keyword">commit</span></div><div class="line"></div><div class="line">Changes <span class="keyword">to</span> be committed:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git rm --cached &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)</div><div class="line"></div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   Guardfile</div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   README</div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   config.rb</div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   deploy.rb</div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   setup.rb</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">include</span> <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">	database.yml // 此文件就是关卡所需要查看到的文件</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-10-number-of-files-committed"><a href="#LEVEL-10-number-of-files-committed" class="headerlink" title="LEVEL 10 number_of_files_committed"></a>LEVEL 10 number_of_files_committed</h3><p>There are some files in this repository, how many of the files will be committed?<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git reset HEAD &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)</div><div class="line"></div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   rubyfile1.rb</div><div class="line">	modified:   rubyfile4.rb</div><div class="line"></div><div class="line">Changes <span class="keyword">not</span> staged <span class="keyword">for</span> <span class="keyword">commit</span>:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">update</span> what will be committed)</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard changes <span class="keyword">in</span> working <span class="keyword">directory</span>)</div><div class="line"></div><div class="line">	modified:   rubyfile5.rb</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">include</span> <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">	rubyfile6.rb</div><div class="line">	rubyfile7.rb</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>查看git状态可以看出<br><code>rubyfile1.rb</code> <code>rubyfile4.rb</code>这两个文件已经通过 <code>git add</code> 指令加入，将会commit<br><code>rubyfile5.rb</code> 文件已经改变但是没有 <code>add</code><br><code>rubyfile6.rb</code> <code>rubyfile7.rb</code>这两个文件还未加入监视  </p>
+</blockquote>
+<h3 id="LEVEL-11-rm"><a href="#LEVEL-11-rm" class="headerlink" title="LEVEL 11 rm"></a>LEVEL 11 rm</h3><p>A file has been removed from the working tree, however the file was not removed from the repository.  Find out what this file was and remove it.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git status</div><div class="line">On branch master</div><div class="line">Changes not staged for <span class="keyword">commit</span>:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add/rm &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">update</span> what will be committed)</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git checkout -- &lt;file&gt;..."</span> <span class="keyword">to</span> discard changes <span class="keyword">in</span> working <span class="keyword">directory</span>)</div><div class="line"></div><div class="line">	deleted:    deleteme.rb</div><div class="line"></div><div class="line"><span class="keyword">no</span> changes added <span class="keyword">to</span> <span class="keyword">commit</span> (<span class="keyword">use</span> <span class="string">"git add"</span> <span class="keyword">and</span>/<span class="keyword">or</span> <span class="string">"git commit -a"</span>)</div><div class="line">➜  git_hug git:(<span class="keyword">master</span>) ✗ git rm deleteme.rb</div><div class="line">rm <span class="string">'deleteme.rb'</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-12-rm-cached"><a href="#LEVEL-12-rm-cached" class="headerlink" title="LEVEL 12 rm_cached"></a>LEVEL 12 rm_cached</h3><p>A file has accidentally been added to your staging area, find out which file and remove it from the staging area.  <em>NOTE</em> Do not remove the file from the file system, only from git.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git status</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial <span class="keyword">commit</span></div><div class="line"></div><div class="line">Changes <span class="keyword">to</span> be committed:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git rm --cached &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)</div><div class="line"></div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   deleteme.rb</div><div class="line"></div><div class="line">➜  git_hug git:(<span class="keyword">master</span>) ✗ git rm <span class="comment">--cache deleteme.rb</span></div><div class="line">rm <span class="string">'deleteme.rb'</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>将一个新文件从 staging area 中删除。<br>按照要求，不应该直接从硬盘上删除这个文件，只是从 Git 中删除而已。<br>加上 <code>--cache</code> 可以是文件只是从 staging area 中移除，不会真正的删除物理文件.<br>如果要连这个物理文件也一起删除，请使用 <code>-f</code> 选项</p>
+</blockquote>
+<h3 id="LEVEL-13-stash"><a href="#LEVEL-13-stash" class="headerlink" title="LEVEL 13 stash"></a>LEVEL 13 stash</h3><p>You’ve made some changes and want to work on them later. You should save them, but don’t commit them.<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git stash</div><div class="line">Saved working directory <span class="keyword">and</span> index state WIP on master: <span class="number">0206059</span> Add some lyrics</div><div class="line">HEAD is now at <span class="number">0206059</span> Add some lyrics</div><div class="line"></div><div class="line"><span class="comment">//待会工作完之后</span></div><div class="line">➜  git_hug git:(master) git stash apply</div><div class="line"></div><div class="line"><span class="comment">//具体指令可以查看帮助</span></div><div class="line">➜  git_hug git:(master) ✗ git stash h</div><div class="line">usage: git stash list <span class="meta">[&lt;options&gt;]</span></div><div class="line">   <span class="keyword">or</span>: git stash show <span class="meta">[&lt;stash&gt;]</span></div><div class="line">   <span class="keyword">or</span>: git stash drop [-q|--quiet] <span class="meta">[&lt;stash&gt;]</span></div><div class="line">   <span class="keyword">or</span>: git stash ( pop | apply ) [--index] [-q|--quiet] <span class="meta">[&lt;stash&gt;]</span></div><div class="line">   <span class="keyword">or</span>: git stash branch &lt;branchname&gt; <span class="meta">[&lt;stash&gt;]</span></div><div class="line">   <span class="keyword">or</span>: git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]</div><div class="line">		       [-u|--include-untracked] [-a|--all] <span class="meta">[&lt;message&gt;]</span>]</div><div class="line">   <span class="keyword">or</span>: git stash clear</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-14-rename"><a href="#LEVEL-14-rename" class="headerlink" title="LEVEL 14 rename"></a>LEVEL 14 rename</h3><p>We have a file called <code>oldfile.txt</code>. We want to rename it to <code>newfile.txt</code> and stage this change.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">git</span> <span class="selector-tag">mv</span> <span class="selector-tag">oldfile</span><span class="selector-class">.txt</span> <span class="selector-tag">newfile</span><span class="selector-class">.txt</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>重命名文件。首先这个文件需要是已经是已追踪状态，才可以使用 <code>git mv</code> 命令，操作完成后自动处于 staging 状态</p>
+</blockquote>
+<h3 id="LEVEL-15-restructure"><a href="#LEVEL-15-restructure" class="headerlink" title="LEVEL 15 restructure"></a>LEVEL 15 restructure</h3><p>You added some files to your repository, but now realize that your project needs to be restructured.  Make a new folder named <code>src</code> and using Git move all of the .html files into this folder.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">mkdir</span> <span class="selector-tag">src</span></div><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">ls</span></div><div class="line"><span class="selector-tag">about</span><span class="selector-class">.html</span>   <span class="selector-tag">contact</span><span class="selector-class">.html</span> <span class="selector-tag">index</span><span class="selector-class">.html</span>   <span class="selector-tag">src</span></div><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> <span class="selector-tag">git</span> <span class="selector-tag">mv</span> *<span class="selector-class">.html</span> <span class="selector-tag">src</span></div><div class="line">➜  <span class="selector-tag">git_hug</span> <span class="selector-tag">git</span><span class="selector-pseudo">:(master)</span> ✗ <span class="selector-tag">ls</span></div><div class="line"><span class="selector-tag">src</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-16-log"><a href="#LEVEL-16-log" class="headerlink" title="LEVEL 16 log"></a>LEVEL 16 log</h3><p>You will be asked for the hash of most recent commit.  You will need to investigate the logs of the repository for this.<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  git_hug <span class="string">git:</span>(master) git log</div><div class="line"></div><div class="line"></div><div class="line">commit f8614c9c2b4f86ce1dd0e5015dd93ea774c21efc  <span class="comment">//所需要的HASH值</span></div><div class="line"><span class="string">Author:</span> guoquan.yang &lt;guoquan.yang<span class="meta">@hkfdt</span>.cn&gt;</div><div class="line"><span class="string">Date:</span>   Fri Jul <span class="number">22</span> <span class="number">11</span>:<span class="number">49</span>:<span class="number">52</span> <span class="number">2016</span> +<span class="number">0800</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-17-tag"><a href="#LEVEL-17-tag" class="headerlink" title="LEVEL 17 tag"></a>LEVEL 17 tag</h3><p>We have a git repo and we want to tag the current commit with <code>new_tag</code>.<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(<span class="literal">master</span>) git <span class="keyword">tag</span> <span class="title">new_tag</span></div><div class="line">//查看<span class="keyword">tag</span>列表</div><div class="line">➜  git_hug git:(<span class="literal">master</span>) git <span class="keyword">tag</span> <span class="title">-l</span></div><div class="line">new_tag</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-18-push-tags"><a href="#LEVEL-18-push-tags" class="headerlink" title="LEVEL 18 push_tags"></a>LEVEL 18 push_tags</h3><p>将所有本地 tag 都推送到远端。–tags 参数代表将所有的 tags 都推送到远端     </p>
+<p>There are tags in the repository that aren’t pushed into remote repository. Push them now.</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) git <span class="built_in">push</span> --tags <span class="built_in">origin</span> master</div><div class="line">Total <span class="number">0</span> (<span class="built_in">delta</span> <span class="number">0</span>), reused <span class="number">0</span> (<span class="built_in">delta</span> <span class="number">0</span>)</div><div class="line">To /<span class="built_in">var</span>/folders/ww/1r6f4ktj08b2kn54r_q75m2m0000gn/T/d20160722-<span class="number">4198</span>-iirqfw/.git</div><div class="line"> * [<span class="built_in">new</span> tag]         tag_to_be_pushed -&gt; tag_to_be_pushed</div></pre></td></tr></table></figure>
+<h3 id="LEVEL-19-commit-amend"><a href="#LEVEL-19-commit-amend" class="headerlink" title="LEVEL 19 commit_amend"></a>LEVEL 19 commit_amend</h3><p>The <code>README</code> file has been committed, but it looks like the file <code>forgotten_file.rb</code> was missing from the commit.  Add the file and amend your previous commit to include it.<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  git_hug gi<span class="variable">t:</span>(master) ✗ git <span class="built_in">add</span> forgotten_file.rb</div><div class="line">➜  git_hug gi<span class="variable">t:</span>(master) ✗ git commit --amend</div><div class="line">//这里之后直接`:<span class="keyword">wq</span>`保存退出</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-20-commit-in-future"><a href="#LEVEL-20-commit-in-future" class="headerlink" title="LEVEL 20 commit_in_future"></a>LEVEL 20 commit_in_future</h3><p>Commit your changes with the future date (e.g. tomorrow).<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">➜  git_hug git:(master) ✗ git <span class="keyword">commit</span> <span class="comment">--date=22.07.2016T00:00:00</span></div><div class="line">//进入编辑界面在第一行写入<span class="keyword">commit</span>注释（<span class="keyword">add</span> README）</div><div class="line">[<span class="keyword">master</span> (root-<span class="keyword">commit</span>) <span class="number">372e06</span>c] <span class="keyword">add</span> README</div><div class="line"> <span class="built_in">Date</span>: Fri Jul <span class="number">22</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span> <span class="number">2016</span> +<span class="number">0800</span></div><div class="line"> <span class="number">1</span> <span class="keyword">file</span> <span class="keyword">changed</span>, <span class="number">0</span> insertions(+), <span class="number">0</span> deletions(-)</div><div class="line"> <span class="keyword">create</span> <span class="keyword">mode</span> <span class="number">100644</span> README</div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-21-reset"><a href="#LEVEL-21-reset" class="headerlink" title="LEVEL 21  reset"></a>LEVEL 21  reset</h3><p>两个文件都被添加到了 staging area, 但是只想提交其中一个。使用 git reset 可以用仓库中的版本覆盖 staging area 的版本。</p>
+<blockquote>
+<p> <strong><code>git reset</code></strong> 使用仓库中的版本覆盖 <code>staging area</code> 中的，如果 <code>working directory</code> 该文件没有其他修改，则 <code>staging area</code> 中的修改将应用到 <code>working directory</code> 中。反之<code>working directory</code> 中的版本将被保留，丢弃 <code>staging area</code> 中的修改。<br> <strong><code>git checkout</code></strong> 则是使用 <code>staging area</code> 的中的版本覆盖 <code>working directory</code>。</p>
+</blockquote>
+<p>There are two files to be committed.  The goal was to add each file as a separate commit, however both were added by accident.  Unstage the file <code>to_commit_second.rb</code> using the reset command (don’t commit anything).<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) ✗ git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git reset HEAD &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)</div><div class="line"></div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   to_commit_first.rb</div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   to_commit_second.rb</div><div class="line"></div><div class="line">➜  git_hug git:(<span class="keyword">master</span>) ✗ git <span class="keyword">reset</span> <span class="keyword">HEAD</span> to_commit_second.rb</div><div class="line">➜  git_hug git:(<span class="keyword">master</span>) ✗ git <span class="keyword">status</span></div><div class="line"><span class="keyword">On</span> branch <span class="keyword">master</span></div><div class="line">Changes <span class="keyword">to</span> be committed:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git reset HEAD &lt;file&gt;..."</span> <span class="keyword">to</span> unstage)</div><div class="line"></div><div class="line">	<span class="keyword">new</span> <span class="keyword">file</span>:   to_commit_first.rb</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (<span class="keyword">use</span> <span class="string">"git add &lt;file&gt;..."</span> <span class="keyword">to</span> <span class="keyword">include</span> <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">	to_commit_second.rb</div><div class="line"></div><div class="line">➜  git_hug git:(<span class="keyword">master</span>) ✗ git <span class="keyword">commit</span> -m <span class="string">"commit"</span></div></pre></td></tr></table></figure></p>
+<h3 id="LEVEL-22-reset-soft"><a href="#LEVEL-22-reset-soft" class="headerlink" title="LEVEL 22 reset_soft"></a>LEVEL 22 reset_soft</h3><blockquote>
+<p>撤销上一次提交。<br>–soft 参数将上一次的修改放入 staging area<br>–mixed 参数将上一次的修改放入 working directory<br>–hard 参数直接将上一次的修改抛弃   </p>
+</blockquote>
+<p>You committed too soon. Now you want to undo the last commit, while keeping the index.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  git_hug git:(master) git <span class="keyword">reset</span> <span class="comment">--soft HEAD^1</span></div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/07/24/3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          githug 通关笔记(二)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/07/1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript有几种数据类型？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Guoquan.Yang
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">npm</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">摸索着前行</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

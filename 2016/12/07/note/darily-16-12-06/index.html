@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>使用nrm快速切换npm registry | Yang&#39;s Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="由于国内环境，需要畅快的使用npm需要爬梯翻墙所以很多人采用cnpm，淘宝镜像等等第三方的npm registrynrm就是一个可以快速切换第三方npm registry的工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用nrm快速切换npm registry">
+<meta property="og:url" content="http://yoursite.com/2016/12/07/note/darily-16-12-06/index.html">
+<meta property="og:site_name" content="Yang's Garden">
+<meta property="og:description" content="由于国内环境，需要畅快的使用npm需要爬梯翻墙所以很多人采用cnpm，淘宝镜像等等第三方的npm registrynrm就是一个可以快速切换第三方npm registry的工具">
+<meta property="og:updated_time" content="2016-12-07T02:52:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用nrm快速切换npm registry">
+<meta name="twitter:description" content="由于国内环境，需要畅快的使用npm需要爬梯翻墙所以很多人采用cnpm，淘宝镜像等等第三方的npm registrynrm就是一个可以快速切换第三方npm registry的工具">
+  
+    <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="http://7xsodh.com1.z0.glb.clouddn.com/YangHeader.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Guoquan.Yang</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">凡是让你痛苦的，都是让你成长的</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">全部文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yangguoquan" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:15258850989@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Guoquan.Yang</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://7xsodh.com1.z0.glb.clouddn.com/YangHeader.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Guoquan.Yang</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">凡是让你痛苦的，都是让你成长的</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+		        
+		        	<li><a href="/archives">全部文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yangguoquan" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:15258850989@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-note/darily-16-12-06" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用nrm快速切换npm registry
+    </h1>
+  
+
+        <a href="/2016/12/07/note/darily-16-12-06/" class="archive-article-date">
+  	<time datetime="2016-12-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>由于国内环境，需要畅快的使用npm需要爬梯翻墙<br>所以很多人采用cnpm，淘宝镜像等等第三方的npm registry<br>nrm就是一个可以快速切换第三方npm registry的工具</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li><h3 id="动手前的小贴士"><a href="#动手前的小贴士" class="headerlink" title="动手前的小贴士"></a>动手前的小贴士</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cat</span> ~/.npmrc</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>查看用户根目录下npm的当前信息</p>
+<blockquote>
+<p>ps:安装nrm最好先清理掉.npmrc中的信息。记得清理前记住自己的npm用户信息和使用的私有npm地址，</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">rm</span> ~/.npmrc</div></pre></td></tr></table></figure>
+<p>删除.npmrc文件</p>
+<ul>
+<li><h3 id="安装nrm"><a href="#安装nrm" class="headerlink" title="安装nrm"></a>安装nrm</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ npm <span class="keyword">install</span> -g nrm   <span class="comment"># 安装nrm</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="查看npm-registry"><a href="#查看npm-registry" class="headerlink" title="查看npm registry"></a>查看npm registry</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">➜  ~ nrm ls</div><div class="line"></div><div class="line">  npm ---- <span class="string">https:</span><span class="comment">//registry.npmjs.org/</span></div><div class="line">  cnpm --- <span class="string">http:</span><span class="comment">//r.cnpmjs.org/</span></div><div class="line">  taobao - <span class="string">https:</span><span class="comment">//registry.npm.taobao.org/</span></div><div class="line">  nj ----- <span class="string">https:</span><span class="comment">//registry.nodejitsu.com/</span></div><div class="line">  rednpm - <span class="string">http:</span><span class="comment">//registry.mirror.cqupt.edu.cn/</span></div><div class="line">  npmMirror  <span class="string">https:</span><span class="comment">//skimdb.npmjs.com/registry/</span></div><div class="line">  edunpm - <span class="string">http:</span><span class="comment">//registry.enpmjs.org/</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="添加npm-registry"><a href="#添加npm-registry" class="headerlink" title="添加npm registry"></a>添加npm registry</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~ nrm <span class="keyword">add</span><span class="bash"> fdt http://xxx.xxx.xxx.xxx:xxxx/</span></div><div class="line"></div><div class="line">    <span class="keyword">add</span><span class="bash"> registry fdt success</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="使用npm-registry"><a href="#使用npm-registry" class="headerlink" title="使用npm registry"></a>使用npm registry</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  ~ nrm <span class="keyword">use</span> fdt</div><div class="line">                         verb config Skipping <span class="keyword">project</span> config: /<span class="keyword">Users</span>/xxx/.npmrc. (matches userconfig)</div><div class="line"></div><div class="line">   Registry has been <span class="keyword">set</span> <span class="keyword">to</span>: <span class="keyword">http</span>://xxx.xxx.xxx.xxx:xxxx/</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="删除npm-registry"><a href="#删除npm-registry" class="headerlink" title="删除npm registry"></a>删除npm registry</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">➜  ~ nrm del sinopia</div><div class="line">⸨░░░░░░░░░░░░░░░░░░⸩ ⠹ : <span class="keyword">verb</span> config Skipping project confi<span class="variable">g:</span> /Users/xxx/.npmrc. (matches userconfig)</div><div class="line">    <span class="keyword">delete</span> registry sinopia success</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">   Registry <span class="built_in">has</span> been <span class="keyword">set</span> <span class="keyword">to</span>: http://xxx.xxx.xxx.xxx:xxxx/</div><div class="line"></div><div class="line">➜  ~</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="测试npm-registry的速度"><a href="#测试npm-registry的速度" class="headerlink" title="测试npm registry的速度"></a>测试npm registry的速度</h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">➜  ~ nrm test fdt</div><div class="line"></div><div class="line">  fdt <span class="comment">---- 85ms</span></div><div class="line"></div><div class="line">➜  ~ nrm test</div><div class="line"></div><div class="line">* npm <span class="comment">---- 9270ms</span></div><div class="line">  cnpm <span class="comment">--- 1620ms</span></div><div class="line">  taobao - <span class="number">237</span>ms</div><div class="line">  nj <span class="comment">----- Fetch Error</span></div><div class="line">  rednpm - Fetch <span class="literal">Error</span></div><div class="line">  npmMirror  <span class="number">6490</span>ms</div><div class="line">  edunpm - Fetch <span class="literal">Error</span></div><div class="line">  fdt <span class="comment">---- 47ms</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="npm-registry-切换之后最好看下当前的npm-user"><a href="#npm-registry-切换之后最好看下当前的npm-user" class="headerlink" title="npm registry 切换之后最好看下当前的npm user"></a>npm registry 切换之后最好看下当前的npm user</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ <span class="built_in">npm</span> whoami</div><div class="line">you <span class="built_in">npm</span> name</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="登录npm-user"><a href="#登录npm-user" class="headerlink" title="登录npm user"></a>登录npm user</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ <span class="built_in">npm</span> adduser</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-book icon"></i>
+	<a class="article-category-link" href="/categories/note/">-note</a>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/24/3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">githug 通关笔记(二)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Guoquan.Yang
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">npm</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">摸索着前行</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
