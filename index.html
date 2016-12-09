@@ -210,38 +210,7 @@
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
 <p>除了正常运行模式，ECMAscript 5添加了第二种运行模式：”严格模式”（strict mode）。顾名思义，这种模式使得Javascript在更严格的条件下运行。  </p>
 </blockquote>
-<h3 id="设立严格模式的目的有以下几个："><a href="#设立严格模式的目的有以下几个：" class="headerlink" title="设立严格模式的目的有以下几个："></a>设立严格模式的目的有以下几个：</h3><ol>
-<li>消除JavaScript语法的一些不合理，不严谨之处，减少一些怪异行为；</li>
-<li>消除代码运行的一些不安全之处，保证代码运行的安全；</li>
-<li>提高编译器效率，增加运行速度；</li>
-<li>为未来版本的JavaScript做好铺垫</li>
-</ol>
-<p>严格模式”体现了Javascript更合理、更安全、更严谨的发展方向，包括IE 10在内的主流浏览器，都已经支持它，许多大项目已经开始全面拥抱它。<br>另一方面，同样的代码，在”严格模式”中，可能会有不一样的运行结果；一些在”正常模式”下可以运行的语句，在”严格模式”下将不能运行。掌握这些内容，有助于更细致深入地理解Javascript，让你变成一个更好的程序员。</p>
-<h2 id="进入标志"><a href="#进入标志" class="headerlink" title="进入标志"></a>进入标志</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">　　"use strict"</span>;</div></pre></td></tr></table></figure>
-<h2 id="调用场合"><a href="#调用场合" class="headerlink" title="调用场合"></a>调用场合</h2><h3 id="针对整个脚本文件"><a href="#针对整个脚本文件" class="headerlink" title="针对整个脚本文件"></a>针对整个脚本文件</h3><p>将”use strict”放在脚本文件的第一行，则整个脚本都将以”严格模式”运行。如果这行语句不在第一行，则无效，整个脚本以”正常模式”运行。如果不同模式的代码文件合并成一个文件，这一点需要特别注意。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="string">"use strict"</span>;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"这是严格模式。"</span>);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"这是正常模式。"</span>);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<h3 id="针对单个函数"><a href="#针对单个函数" class="headerlink" title="针对单个函数"></a>针对单个函数</h3><p>将”use strict”放在函数体的第一行，则整个函数以”严格模式”运行。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">strict</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">　　"use strict"</span>;</div><div class="line">　　<span class="keyword">return</span> <span class="string">"这是严格模式。"</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">notStrict</span>(<span class="params"></span>) </span>&#123;</div><div class="line">　　<span class="keyword">return</span> <span class="string">"这是正常模式。"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="脚本文件的变通写法"><a href="#脚本文件的变通写法" class="headerlink" title="脚本文件的变通写法"></a>脚本文件的变通写法</h3><p>因为第一种调用方法不利于文件合并，所以更好的做法是，借用第二种方法，将整个脚本文件放在一个立即执行的匿名函数之中。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta"></span></div><div class="line">    "use strict";</div><div class="line">    <span class="comment">// some code here</span></div><div class="line"></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<h3 id="语法和行为改变"><a href="#语法和行为改变" class="headerlink" title="语法和行为改变"></a>语法和行为改变</h3><p>严格模式对Javascript的语法和行为，都做了一些改变。</p>
-<h4 id="全局变量显式声明"><a href="#全局变量显式声明" class="headerlink" title="全局变量显式声明"></a>全局变量显式声明</h4><p>在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line">v = <span class="number">1</span>; <span class="comment">// 报错，v未声明</span></div><div class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123; <span class="comment">// 报错，i未声明</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="静态绑定"><a href="#静态绑定" class="headerlink" title="静态绑定"></a>静态绑定</h4><p>Javascript语言的一个特点，就是允许”动态绑定”，即某些属性和方法到底属于哪一个对象，不是在编译时确定的，而是在运行时（runtime）确定的。</p>
-<p>严格模式对动态绑定做了一些限制。某些情况下，只允许静态绑定。也就是说，属性和方法到底归属哪个对象，在编译阶段就确定。这样做有利于编译效率的提高，也使得代码更容易阅读，更少出现意外。</p>
-<ul>
-<li><p>禁止使用 <code>with</code> 语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">　　"use strict"</span>;</div><div class="line">　　<span class="keyword">var</span> v = <span class="number">1</span>;</div><div class="line">　　<span class="keyword">with</span> (o)&#123; <span class="comment">// 语法错误</span></div><div class="line">　　　　v = <span class="number">2</span>;</div><div class="line">　　&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>创设 <code>eval</code> 作用域<br>正常模式下，Javascript语言有两种变量作用域（scope）：全局作用域和函数作用域。严格模式创设了第三种作用域：eval作用域。</p>
-</li>
-</ul>
-<p>正常模式下，eval语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于eval内部。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">　　"use strict"</span>;</div><div class="line">　　<span class="keyword">var</span> x = <span class="number">2</span>;</div><div class="line">　　<span class="built_in">console</span>.info(<span class="built_in">eval</span>(<span class="string">"var x = 5; x"</span>)); <span class="comment">// 5</span></div><div class="line">　　<span class="built_in">console</span>.info(x); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
-<h4 id="增强的安全措施"><a href="#增强的安全措施" class="headerlink" title="增强的安全措施"></a>增强的安全措施</h4><ul>
-<li>禁止this关键字指向全局对象</li>
-</ul>
-
+        <a class="article-more-a"  href="/2016/09/10/note/darily-16-09-10/#more">more >></a>
       
 
       
@@ -415,7 +384,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li></ul>
 	</div>
 
       
@@ -598,19 +567,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">git</a>
+                <a href="javascript:void(0)">javaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">javaScript</a>
+                <a href="javascript:void(0)">git</a>
               </li>
              
               <li class="article-tag-list-item">
